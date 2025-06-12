@@ -6,21 +6,21 @@ public class AreaCalculator {
 		switch (shapeType) {
 			case CIRCLE:
 				if (dimensions.length != 1) {
-					throw new IllegalArgumentException("CIRCLE needs 1 dimension (radius)");
+					throw new IllegalArgumentException("This CIRCLE needs 1 dimension (radius)");
 				}
 				return Math.PI * dimensions[0] * dimensions[0];
 			case SQUARE:
 				if (dimensions.length != 1) {
-					throw new IllegalArgumentException("SQUARE needs 1 dimension (side)");
+					throw new IllegalArgumentException("This SQUARE needs 1 dimension (side)");
 				}
 				return dimensions[0] * dimensions[0];
 			case RECTANGLE:
 				if (dimensions.length != 2) {
-					throw new IllegalArgumentException("RECTANGLE needs 2 dimensions (length and width)");
+					throw new IllegalArgumentException("This RECTANGLE needs 2 dimensions (length and width)");
 				}
 				return dimensions[0] * dimensions[1];
 			default:
-				throw new UnsupportedOperationException("Unknown shape type");
+				throw new UnsupportedOperationException("Shape type Unfinded");
 		}
 	}
 
