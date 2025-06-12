@@ -9,13 +9,13 @@ public class AreaCalculatorTest {
 
 	@Test
 	void testCircleArea() {
-		double result = AreaCalculator.calculateArea(ShapeType.CIRCLE, 2);
+		double result = AreaCalculator.calculateArea(ShapeType.CIRCLEss, 2);
 		assertEquals(Math.PI * 4, result, 0.001);
 	}
 
 	@Test
 	void testSquareArea() {
-		double result = AreaCalculator.calculateArea(ShapeType.SQUARE, 3);
+		double result = AreaCalculator.calculateArea(ShapeType.SQUAREss, 3);
 		assertEquals(9.0, result, 0.001);
 	}
 
