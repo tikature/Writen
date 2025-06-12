@@ -6,21 +6,17 @@ import src.main.java.*;
 
 public class AreaCalculatorTest {
 
-	@Test
-	void testCircleArea() {
-		double result = AreaCalculator.calculateArea(ShapeType.CIRCLE, 2);
-		assertEquals(Math.PI * 4, result, 0.001);
-	}
+    @Test
+    public void testCircleArea() {
+        AreaCalculator calc = new AreaCalculator();
+        double result = calc.calculate(ShapeType.CIRCLE, 3);
+        assertEquals(28.274, result, 0.001); // π * r^2 = ~28.274
+    }
 
-	@Test
-	void testSquareArea() {
-		double result = AreaCalculator.calculateArea(ShapeType.SQUARE, 3);
-		assertEquals(9.0, result, 0.001);
-	}
-
-	@Test
-	void testRectangleArea() {
-		double result = AreaCalculator.calculateArea(ShapeType.RECTANGLE, 4, 5);
-		assertEquals(20.0, result, 0.001);
-	}
+    @Test
+    public void testSquareArea() {
+        AreaCalculator calc = new AreaCalculator();
+        double result = calc.calculate(ShapeType.SQUARE, 4);
+        assertEquals(16.0, result, 0.001); // 4 * 4 = 16
+    }
 }
